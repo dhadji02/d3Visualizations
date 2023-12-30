@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://kit.fontawesome.com/657e4285f5.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Load Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div id="page">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" width="50" height="50" class="d-inline-block"><em id="logo_title"> Rising Star</em></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-success justify-content-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Learn about the dataset
+                </button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+<div id="pellares">
+    <h1 class = "heading">Welcome!</h1>
+    <h5 class = "heading">We are three Greek Master's Students (okay one is Cypriot, but still counts) in Human-Computer Interaction at Utrecht University!</h5>
+    <h1 class = "heading">Meet Us!</h1>
+  </div>
+    <div id="about">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card text-white bg-dark">
+            <div class="card-body text-center">
+              <img src="img/hadjicosti.jpg" class="card-img-top">
+              <h5 class="card-title">Demetra Hadjicosti</h5>
+              <p class="card-text">MSc. Human Computer Interaction</p>
+              <a href="https://www.linkedin.com/in/demetrahadjicosti/" class="btn btn-success"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-white bg-dark">
+            <div class="card-body  text-center">
+              <img src="img/vnzlk.jpg" class="card-img-top">
+              <h5 class="card-title">Ioanna Vounzoulaki</h5>
+              <p class="card-text">MSc. Human Computer Interaction</p>
+              <a href="https://www.linkedin.com/in/ioanna-vounzoulaki-505914196/" class="btn btn-success"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card text-white bg-dark">
+            <div class="card-body  text-center">
+              <img src="img/ouzaki.jpg" class="card-img-top">
+              <h5 class="card-title">Eleni Mouzaki</h5>
+              <p class="card-text">MSc. Human Computer Interaction</p>
+              <a href="https://www.linkedin.com/in/eleni-mouzaki-1b6248205/" class="btn btn-success"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Dataset Information</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        The dataset used to make these visualizations provided, is a Kaggle dataset that contains information on the popularity of Spotify's top tracks by their respective genres.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Okay!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer class="heading1">
+      This website was created in the context of the Final Project of the course INFOMVIS - Meaningful Visualization of the Graduate School of Natural Sciences of Utrecht University, during the academic year 2022-2023.
+      <div>© 2023. Demetra Hadjicosti, Ioanna Vounzoulaki, Eleni Mouzaki. All rights Reserved.</div>
+    </footer>
+
+    <!-- embedding JS libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    
+
+    <!-- d3 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Prepare data; display bar chart; click event listener; update DOM -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

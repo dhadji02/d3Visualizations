@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rising Star</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/657e4285f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Load Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+    <div id="page">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" width="50" height="50" class="d-inline-block"/><em id="logo_title"> Rising Star</em></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-success justify-content-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Learn about the dataset
+              </button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Modal Dataset -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Dataset Information
+              </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              The dataset used to make these visualizations provided, is a
+              Kaggle dataset that contains information on the popularity of
+              Spotify's top tracks by their respective genres.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                Okay!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="heading" id="header">
+        <h1>Are you a new Artist?</h1>
+        <h1>Let us help you become the next Rising Star!</h1>
+      </div>
+      <div id="desc">
+        Learn about the most popular genre of music right now, about the perfect
+        key to base your songs on, and what day of the week and what month will
+        your song will have the best chances of becoming popular! Check the
+        graphs, filter them, and be ready for your bright career! You can find
+        more information next to each graph!
+      </div>
+
+      <div class="d-grid justify-content-md-center">
+        <button class="btn btn-lg btn-info" id="scroll" onClick="document.getElementById('tabs').scrollIntoView();">
+          <i class="fa-solid fa-angles-down"></i>
+        </button>
+      </div>
+
+      <div id="tabs">
+        <ul class="nav nav-tabs nav-justified flex-column flex-md-row" id="navbar" role="tablist">
+          <li class="nav-item" role="presentation" id="1">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+              What Genre should I choose?
+            </button>
+          </li>
+          <li class="nav-item" role="presentation" id="2">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+              What is the best key to use?
+            </button>
+          </li>
+          <li class="nav-item" role="presentation" id="3">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+              Best Release Day/Month
+            </button>
+          </li>
+        </ul>
+        <!--Genre Popularity-->
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class = "row" id="choice">Choose up to 3 genres:</div>
+              <div class="row" id="check">
+                <div class="col-sm-6 col-md-6 col-lg-2 col-xl-3 justify-content-center">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="0" onclick="chkcontrol(0)";>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Ballad
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" onclick="chkcontrol(1)";>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Country
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="2" onclick="chkcontrol(2)";>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Dance Pop
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="3" onclick="chkcontrol(3)";>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Electronic Dance Music
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="4" onclick="chkcontrol(4)";>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Indie
+                    </label>
+                  </div>
+                </div>
+                  <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="5" onclick="chkcontrol(5)";>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Jazz
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="6" onclick="chkcontrol(6)";>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Punk Rock
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="7" onclick="chkcontrol(7)";>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Rap
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="8" onclick="chkcontrol(8)";>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      R&B
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="9" onclick="chkcontrol(9)";>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Rock
+                    </label>
+                  </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-2 col-xl-3" id="colors">
+                    <div id="choice1">Colors of the chart
+                      <div id="c1"></div>
+                      <div id="c2"></div>
+                      <div id="c3"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-2 col-xl-4" id="peri">
+                    This visualization (Line Chart), shows how popularity changes for up to three genres selected in relation to time (years). The time period spans from 1929 to 2022. Popularity is measured by the “Play Count” count of songs.
+                  </div>
+                </div>
+                  <div class="row">
+                    <div class="d-flex col-sm-6 col-md-6 col-lg-12 col-xl-12 justify-content-center">
+                      <div id="genre_popul"></div>
+                    </div>
+              </div>
+          </div>
+          <!--Key Popularity-->
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+            <div class = "row" id="choice">
+              Choose genre:
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <select class="form-select-sm" aria-label="Default select example" id="keySelect">
+                  <option selected disabled>Choose Genre</option>
+                  <option value="ballad">Ballad</option>
+                  <option value="country">Country</option>
+                  <option value="dance pop">Dance Pop</option>
+                  <option value="edm">Electronic Dance Music</option>
+                  <option value="indie">Indie</option>
+                  <option value="Jazz">Jazz</option>
+                  <option value="Punk Rock">Punk Rock</option>
+                  <option value="rap">Rap</option>
+                  <option value="rb">R&B</option>
+                  <option value="rock">Rock</option>
+                </select>
+                <div id="key_chart"></div>
+              </div>
+              <div class="col d-flex align-items-center justify-content-center" id="peri">
+                To create this visualization, the top 100 most popular songs were used. This visualization (Histogram), represents the frequency of each music key in which each of the top 100 songs has been written and for each genre, individually. The numbers inside the bars of the Histogram are expressed in percentages.
+              </div>
+            </div>
+          </div>
+          <!--Release Month/Day-->
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+            <div class="row">
+              <div class="col" id="peri">
+                The first visualization displayed (Line Chart), shows how popularity changes in relation to the release month of songs. 
+                The second visualization which could either be a line chart or a heatmap shows how popularity changes in relation to the release weekday of songs. 
+                The “Play Count” of each song is expressed as a score which is represented as popularity.
+                When the user clicks a tick on the axis, that represents the month in the first visualization, the second one adapts to this selection. In order to calculate the popularity, the charts take into account data from 1929-2022.
+            </div>
+            </div>
+            <div class = "row" id="choice">
+              Choose genre:
+            </div>
+            <div class="row">
+              <div class="col">
+                <select class="form-select-sm" aria-label="Default select example" id="genreSelect">
+                  <option selected disabled>Choose Genre</option>
+                  <option value="ballad">Ballad</option>
+                  <option value="country">Country</option>
+                  <option value="dance pop">Dance Pop</option>
+                  <option value="edm">Electronic Dance Music</option>
+                  <option value="indie">Indie</option>
+                  <option value="Jazz">Jazz</option>
+                  <option value="Punk Rock">Punk Rock</option>
+                  <option value="rap">Rap</option>
+                  <option value="rb">R&B</option>
+                  <option value="rock">Rock</option>
+                </select>
+                </div>
+              </div>
+                <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                  <div id="genre_month"></div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                  <div id="genre_day"></div>
+                  <div class= " d-flex justify-content-center" id="my_dataviz"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="heading1">
+      This website was created in the context of the Final Project of the course INFOMVIS - Meaningful Visualization of the Graduate School of Natural Sciences of Utrecht University, during the academic year 2022-2023.
+      <div> © 2023. Demetra Hadjicosti, Ioanna Vounzoulaki, Eleni Mouzaki. All rights Reserved.</div>
+    </footer>
+
+    <!-- embedding JS libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- d3 script -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Prepare data; display bar chart; click event listener; update DOM -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
