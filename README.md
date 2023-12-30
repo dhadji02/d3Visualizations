@@ -17,6 +17,10 @@ On the website there are 5 visualizations on the website that are generated via 
 5. Best Release Month/Day - A heatmap that is generated to demonstrate the same result as (4)
 On the website there is an "About Us" page as well, that contains photos and information about the Authors of the project. Also, the user can find some info about the dataset.
 
+![image](https://github.com/dhadji02/d3Visualizations/assets/49306739/34e805e5-178a-43f8-ba2c-2f6985d561d7)
+
+![image](https://github.com/dhadji02/d3Visualizations/assets/49306739/3d668078-651b-45de-9859-36af794cb241)
+
 
 ## Support
 For help, reach out to Demetra Hadjicosti at d.hadjicosti@students.uu.nl. 
